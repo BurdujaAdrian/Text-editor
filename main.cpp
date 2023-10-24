@@ -5,7 +5,7 @@ using namespace std;
 
 void rotation()
 {string s1,s2,dubles; bool r;
-cout<<"input the 2 strings: \n";
+cout<<"input the 2 strings to compare if they are a rotation of each other: \n";
 getline(cin, s1);
 getline(cin, s2);
 dubles=s1+s1;
@@ -29,7 +29,7 @@ else cout<<"its not a rotation \n";
 
 void sentence()
 {string s,punt="!?,'.;:"; int k=0;
-cout<<"\n input the sentence:";
+cout<<"\n input the sentence to count the number of punctuation characters:";
 getline(cin, s);
 for(int i=0;i<s.size();i++)
     for(int j=0;j<punt.size();j++)
@@ -67,7 +67,7 @@ return s;
 
 
 void superpolidrome()
-{ string s,temp; cout<<"input the string:";
+{ string s,temp; cout<<"input the string to check if it's a polidrome:";
 getline(cin,s);
 s=stringclean(s);
 transform(s.begin(), s.end(), s.begin(), ::toupper);
@@ -82,7 +82,7 @@ else cout<<"string is not a polidrome"<<endl;
 
 void polidrome()
 { string s,temp;
-cout<<"enter a word:";
+cout<<"enter a word to check if it's a polidrome:";
 getline(cin,s);
 
 transform(s.begin(), s.end(), s.begin(), ::toupper);
@@ -96,7 +96,7 @@ else cout<<"string is not a polidrome"<<endl;
 }
 
 void upper()
-{string s; cout<<"type the sentence";
+{string s; cout<<"type the sentence to be converted to uppercase";
 getline(cin,s);
 
 transform(s.begin(), s.end(), s.begin(), ::toupper);
