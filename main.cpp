@@ -1,7 +1,32 @@
 #include <iostream>
 #include <string>
 #include <bits/stdc++.h>
+#include <sstream>
 using namespace std;
+
+void ShortestWord()
+{
+string input;
+cout << "Enter a sentence: ";
+getline(cin, input);
+istringstream iss(input);
+string word;
+string shortestWord;
+if (iss >> shortestWord)
+{
+    while (iss >> word)
+    {
+        if (word.length() < shortestWord.length())
+        {
+            shortestWord = word;
+        }
+    }
+    cout << "Shortest word: " << shortestWord << endl;
+} else
+    {
+    cout << "No words found in the sentence." << endl;
+    }
+}
 
 void rotation()
 {string s1,s2,dubles; bool r;
@@ -114,10 +139,33 @@ for(int i=0; i<=s.size(); i++)
 if(ats && dts && atc==1 && dtp>atp+1)
     cout<<"valid email";
 else cout<<"invalid email";
+}
 
+void smallestword()
+{string s, word; int i=0,j=0;
+getline(cin, s);
+while(s[i]!=' ')
+    j++;
+word=s;
+word.erase(j,word.size());
+/*
+for(int n=0;n<s.size();n++)
+    if(s[n]!=' ')
+        if(s[n-1]=' ')
+        {
+            i=n;
+            while(s[i]!=' ')
+                j++;
+
+        }
+*/
+cout<<word;
 }
 int main()
-{cout<<"Easy tastks: \n\n";
+{
+cout<<"Base task 5: \n \n";
+ShortestWord();
+cout<<"Easy tastks: \n\n";
 polidrome();
 upper();
 cout<<"Hard tasks: \n \n";
@@ -125,5 +173,6 @@ rotation();
 sentence();
 superpolidrome();
 isemail();
+
     return 0;
 }
